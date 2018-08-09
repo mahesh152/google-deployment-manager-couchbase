@@ -18,6 +18,9 @@ def GenerateConfig(context):
 
         groupProperties = {
             'runtimeconfigName': context.properties['runtimeconfigName'],
+            'serverUrl': context.properties['serverUrl'],
+            'serverUser': context.properties['serverUser'],
+            'serverPassword': context.properties['serverPassword'],
             'serverVersion': context.properties['serverVersion'],
             'syncGatewayVersion': context.properties['syncGatewayVersion'],
             'couchbaseUsername': context.properties['couchbaseUsername'],

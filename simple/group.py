@@ -218,6 +218,9 @@ def GenerateStartupScript(context):
     services=context.properties['services']
     if 'data' in services or 'query' in services or 'index' in services or 'fts' in services:
         script += 'CLUSTER="' + context.properties['cluster'] + '"\n'
+        script += 'serverUrl="' + context.properties['serverUrl'] + '"\n'
+        script += 'serverUser="' + context.properties['serverUser'] + '"\n'
+        script += 'serverPassword="' + context.properties['serverPassword'] + '"\n'
         script += 'serverVersion="' + context.properties['serverVersion'] + '"\n'
         script += 'couchbaseUsername="' + context.properties['couchbaseUsername'] + '"\n'
         script += 'couchbasePassword="' + context.properties['couchbasePassword'] + '"\n'
