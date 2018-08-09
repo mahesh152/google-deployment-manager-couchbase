@@ -37,6 +37,16 @@ echo "
 vm.swappiness = 0
 " >> /etc/sysctl.conf
 
+
+#######################################################
+############### Make ssh ready ##############
+#######################################################
+echo -e 'couchbase\ncouchbase' | sudo passwd
+sudo sed -i '/PermitRootLogin without-password/c\PermitRootLogin yes' /etc/ssh/sshd_config
+sudo sed -i '/PasswordAuthentication no/c\PasswordAuthentication yes' /etc/ssh/sshd_config
+sudo service ssh restart
+
+
 #######################################################
 ############### Install Couchbase Server ##############
 #######################################################

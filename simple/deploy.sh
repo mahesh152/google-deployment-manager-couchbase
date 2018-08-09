@@ -14,4 +14,4 @@ sed -i 's@valServerPassword@'"${serverPassword}"'@g' parameters.${PARAMETERS_FIL
 sed -i 's@valServerVersion@'"${serverVersion}"'@g' parameters.${PARAMETERS_FILE}.yaml
 sed -i 's@valNodeCount@'"${nodeCount}"'@g' parameters.${PARAMETERS_FILE}.yaml
 
-#gcloud deployment-manager deployments create ${DEPLOYMENT_NAME} --config parameters.${PARAMETERS_FILE}.yaml
+gcloud deployment-manager deployments create ${DEPLOYMENT_NAME} --config parameters.${PARAMETERS_FILE}.yaml
